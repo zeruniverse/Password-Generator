@@ -28,8 +28,8 @@ type
 
 var
   Form1: TForm1;
-var parameter2=100;
-var parameter3=100;
+const parameter2=100;
+const parameter3=100;
 
 implementation
 
