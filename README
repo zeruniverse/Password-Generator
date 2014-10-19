@@ -1,12 +1,12 @@
-#Password Generator
-##Delphi Version
+# Password Generator
+## Delphi Version
 run in Windows Platform
-##Javascript Version
+## Javascript Version
 Using jQuery. Can be executed in most browsers
-##PHP Version
+## PHP Version
 User input parameter 2 and parameter 3 and then the PHP file generate one HTML file for a certain user.  
 When user open this HTML, he only needs to input parameter 1 to generate passwords.
-##Copyright
+## Copyright
 Jeffery Zhao, Oct 19, 2014
-##Licence
+## Licence
 GNU GPL v3
