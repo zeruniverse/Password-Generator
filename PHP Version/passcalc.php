@@ -159,20 +159,8 @@ function goget()
 	}
     header("Content-Type: application/octet-stream");
     $para2=(int)$_GET['para2'];
-	$para3=(int)$_GET['para3'];
-    $ua = $_SERVER["HTTP_USER_AGENT"];
+    $para3=(int)$_GET['para3'];
     $filename = "passcalc.html";
-    $encoded_filename = urlencode($filename);
-    $encoded_filename = str_replace("+", "%20", $encoded_filename);
-       
-    if (preg_match("/MSIE/", $_SERVER['HTTP_USER_AGENT']) ) {
-        header('Content-Disposition:  attachment; filename="' . $encoded_filename . '"');
-    } elseif (preg_match("/Firefox/", $_SERVER['HTTP_USER_AGENT'])) {
-       // header('Content-Disposition: attachment; filename*="utf8' .  $filename . '"');
-        header('Content-Disposition: attachment; filename*="' .  $filename . '"');
-    } else {
-        header('Content-Disposition: attachment; filename="' .  $filename . '"');
-    }
-       
+    header('Content-Disposition:  attachment; filename="' . $filename . '"');
     echohtml($para2,$para3);
 ?>
