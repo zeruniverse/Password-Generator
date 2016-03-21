@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ZerUniverse</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./jquery.min.js"></script>
 
 </head>
 <body>
@@ -16,7 +16,7 @@
     Parameter 1(input an integer): <input type="text"  id="pa1" value="1"/><br />
     Parameter 2(input an integer): <input type="text" id="pa2" value="0"/><br />
 	Parameter 3(input an integer): <input type="text"  id="pa3" value="1" /><br />
-    <input type="button" class="btn" id="chk" onclick="goget();" value=" Generate " /> </form><br /><br />
+    <input type="button" class="btn" id="chk" onclick="goget();" value=" Generate " /> <input type="button" class="btn" id="setck" onclick="setck();" value=" Remember Parameter 2&3 " /> </form><br /><br />
     <span id="r1" class="ppla" style="display:none; color:Red"></span><br />
     <span id="r2" class="ppla" style="display:none; color:Red"></span><br />
     <span id="r3" class="ppla"  style="display:none; color:Red"></span><br /><br /><br /><br /><br />
@@ -33,6 +33,28 @@
 </body>
 </html>
 <script type="text/javascript">
+function getcookie(name){    
+   var cookieArray=document.cookie.split("; ");   
+   var cookie=new Object();    
+   for (var i=0;i<cookieArray.length;i++){    
+      var arr=cookieArray[i].split("=");  
+      if(arr[0]==name)return unescape(arr[1]);
+   } 
+   return ""; 
+} 
+$(document).ready(function(){
+    if(getcookie('p2')!="") $('#p2').val(getcookie('p2'));
+    if(getcookie('p3')!="") $('#p3').val(getcookie('p3'));
+}
+function setcookie(name,value){
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 50 * 365 * 24 * 60 * 60 * 1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+function setck(){
+    setcookie('p2',$('#p2').val());
+    setcookie('p3',$('#p3').val());
+}
 function getcharr(var1)
 {
 	var var2=parseInt(var1);
