@@ -16,7 +16,7 @@
     Parameter 1(input an integer): <input type="text"  id="pa1" value="1"/><br />
     Parameter 2(input an integer): <input type="text" id="pa2" value="0"/><br />
 	Parameter 3(input an integer): <input type="text"  id="pa3" value="1" /><br />
-    <input type="button" class="btn" id="chk" onclick="goget();" value=" Generate " /> <input type="button" class="btn" id="setck" style="display:none" onclick="setck();" value=" Remember Parameter 2&3 " /> </form><br /><br />
+    <input type="button" class="btn" id="chk" onclick="goget();" value=" Generate " /> <input type="button" class="btn" id="setck" style="display:none" onclick="setckk();" value=" Remember Parameter 2&3 " /> </form><br /><br />
     <span id="r1" class="ppla" style="display:none; color:Red"></span><br />
     <span id="r2" class="ppla" style="display:none; color:Red"></span><br />
     <span id="r3" class="ppla"  style="display:none; color:Red"></span><br /><br /><br /><br /><br />
@@ -44,7 +44,7 @@ function setlocalstore(name,value)
 {
     localStorage.setItem(name, value);
 }
-function setck(){
+function setckk(){
     setlocalstore('p2',$('#p2').val());
     setlocalstore('p3',$('#p3').val());
 }
