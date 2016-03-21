@@ -35,8 +35,8 @@
 <script type="text/javascript">
 $(document).ready(function(){
     if(typeof(Storage) != "undefined"){
-        if(localStorage.p2!="" && localStorage.p2!="undefined") $('#p2').val(localStorage.p2);
-        if(localStorage.p3!="" && localStorage.p3!="undefined") $('#p3').val(localStorage.p3);
+        if(localStorage.p2!="" && localStorage.p2!="undefined") $('#pa2').val(localStorage.p2);
+        if(localStorage.p3!="" && localStorage.p3!="undefined") $('#pa3').val(localStorage.p3);
         $("#setck").show();
     }
 });
@@ -45,8 +45,8 @@ function setlocalstore(name,value)
     localStorage.setItem(name, value);
 }
 function setckk(){
-    setlocalstore('p2',$('#p2').val());
-    setlocalstore('p3',$('#p3').val());
+    setlocalstore('p2',$('#pa2').val());
+    setlocalstore('p3',$('#pa3').val());
 }
 function getcharr(var1)
 {
